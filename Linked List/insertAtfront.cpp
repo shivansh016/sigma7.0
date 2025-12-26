@@ -29,7 +29,7 @@ class List {
     void push_front(int val){
         Node * newNode = new Node(val);//dynamic cretion
         if (head == NULL){
-            head = tail = NULL;
+            head = tail = newNode;
         }
         else{
             newNode->next = head;
