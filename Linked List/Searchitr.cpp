@@ -13,10 +13,10 @@ class Node{
 };
 
 class List{
-    public: 
+     
            Node * head;
            Node * tail;
-
+    public:
            List(){
             head = NULL;
             tail = NULL;
