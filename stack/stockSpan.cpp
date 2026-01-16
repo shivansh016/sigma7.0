@@ -6,7 +6,7 @@ using namespace std;
 
 void stockSpan(vector<int> &stock,  vector<int> &span){
     stack<int> ans;
-    int prevHigh=0;
+   
     span[0] = 1;
     ans.push(0);
 
@@ -20,7 +20,7 @@ void stockSpan(vector<int> &stock,  vector<int> &span){
             ans.push(i);
         }
         else{
-            prevHigh = ans.top();
+            int prevHigh = ans.top();
             span[i] = i - prevHigh;
             ans.push(i);
         }
