@@ -13,3 +13,5 @@ int main (){
 
     return 0;
 }
+// note : initially when we define a vector the size and capacity are same when we initialize it while defining...
+// later if we add an element capacity 2x and size increases by 1
