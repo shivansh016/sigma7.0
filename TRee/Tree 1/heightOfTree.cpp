@@ -39,6 +39,17 @@ int height(Node* root){
     int currHeight = max(leftHt, rightHt) + 1;
     return currHeight;
 }
+// for height calculation as no. of edges
+int edgeheight(Node* root){
+    if(root == NULL){
+        return -1; // always remember this .. for edges null ka height = -1, for nodes =0
+    }
+    int leftHt = edgeheight(root->left);
+    int rightHt = edgeheight(root->right);
+
+    return max(leftHt , rightHt) +1;
+}
+
 
 int main(){
     vector<int> nodes = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
@@ -46,6 +57,8 @@ int main(){
 
     cout << "height of tree : " << height(root); // 3
     cout << endl;
+
+    cout << "edge height :" << edgeheight(root) << endl;// 2
 
     idx =-1; //very important 
     vector<int> nodes2 = {1,2,4,-1,-1,5,-1,6,-1,7,-1,-1,3,-1,-1};
