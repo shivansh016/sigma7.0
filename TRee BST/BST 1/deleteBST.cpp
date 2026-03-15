@@ -72,11 +72,6 @@ Node* deleteNode(Node* root, int target){// return the updated root after deleti
             delete root;
             return NULL;
         }else if(root->left == NULL || root->right == NULL ){//case 2. 1 subchild(jab left ya right me se ek koi null ho, dono null ka case 1 me pahle hi ho jayega..)
-            // if(root->left != NULL){
-            //     return root->left;
-            // }else{
-            //     return root->right;
-            // }
             return root->left== NULL ? root->right : root->left;
         }else{// case 3. 2 subchild jab dono hi subchild NULL na ho..
             Node* is = IS(root->right); // right isliye pass kiya kyunki right me hi is hota hai, left most wali node
@@ -86,6 +81,7 @@ Node* deleteNode(Node* root, int target){// return the updated root after deleti
 
         }
     }
+    return root;
 }
 
 int main(){
