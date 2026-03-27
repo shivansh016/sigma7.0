@@ -103,3 +103,6 @@ int main(){
 
     return 0;
 }
+ 
+// sfhjkdshf hsglkjhsddkjfh
+// need to change and add the codes remaining.. later.
